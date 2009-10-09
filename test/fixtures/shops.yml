@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  url: MyString
+  pin: MyString
+  callout: MyString
+
+two:
+  url: MyString
+  pin: MyString
+  callout: MyString
