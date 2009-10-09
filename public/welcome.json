@@ -1,0 +1,17 @@
+[{
+    "name": "Speak",
+    "phrase": "It works. Enter 4 digits!"
+},
+{
+    "name": "GetDigits",
+    "max": 4
+},
+{
+    "name": "Playback",
+    "filename": "airport"
+},
+{
+    "name": "Playback",
+    "filename": "north-dakota"
+}
+]
