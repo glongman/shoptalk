@@ -102,3 +102,162 @@ Migrating to CreateShops (20091009041656)
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
   [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("shops")[0m
+[Shopify App] Loading API credentials from config/shopify.yml
+
+
+Processing CallsController#index to json (for 127.0.0.1 at 2009-10-09 02:31:52) [GET]
+
+NoMethodError (undefined method `downcase' for :type:Symbol):
+  app/controllers/calls_controller.rb:3:in `index'
+
+Rendered rescues/_trace (91.9ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CallsController#index to json (for 127.0.0.1 at 2009-10-09 02:32:29) [GET]
+Rendering calls/index
+Completed in 28ms (View: 27, DB: 0) | 200 OK [http://localhost/calls.json]
+[Shopify App] Loading API credentials from config/shopify.yml
+
+
+Processing ApplicationController#index to json (for 127.0.0.1 at 2009-10-09 02:55:48) [GET]
+
+SyntaxError (/Users/glongman/Projects/shoptalk/app/controllers/calls_controller.rb:14: syntax error, unexpected ':', expecting tASSOC
+...   { :name => :Speak, :phrase: "You entered these digits. #{...
+                              ^
+/Users/glongman/Projects/shoptalk/app/controllers/calls_controller.rb:14: syntax error, unexpected '}', expecting kEND
+...e digits. #{params[:result]}"},
+                              ^
+/Users/glongman/Projects/shoptalk/app/controllers/calls_controller.rb:15: syntax error, unexpected ':', expecting tASSOC
+    { :name => :Speak, :phrase: "You call id is. #{params[:call_id]}"
+                               ^
+/Users/glongman/Projects/shoptalk/app/controllers/calls_controller.rb:16: syntax error, unexpected '}', expecting kEND
+    },
+     ^):
+  
+
+Rendered rescues/_trace (85.7ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CallsController#index to json (for 127.0.0.1 at 2009-10-09 02:56:13) [GET]
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/calls.json]
+
+
+Processing CallsController#index to json (for 127.0.0.1 at 2009-10-09 03:06:03) [GET]
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/calls.json]
+
+
+Processing CallsController#index to json (for 127.0.0.1 at 2009-10-09 03:08:07) [GET]
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/calls.json]
+
+
+Processing CallsController#new to json (for 127.0.0.1 at 2009-10-09 03:08:46) [GET]
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/calls/new.json]
+
+
+Processing CallsController#new to json (for 127.0.0.1 at 2009-10-09 03:09:15) [GET]
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/calls/new.json]
+[Shopify App] Loading API credentials from config/shopify.yml
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-10-09 03:26:10) [GET]
+Redirected to http://localhost:3000/login
+Filter chain halted as [#<ActionController::Filters::AroundFilter:0x101721080 @options={:except=>#<Set: {"welcome"}>}, @identifier=nil, @method=:shopify_session, @kind=:filter>] did_not_yield.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2009-10-09 03:26:10) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 98ms (View: 95, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-10-09 03:28:28) [GET]
+Redirected to http://localhost:3000/login
+Filter chain halted as [#<ActionController::Filters::AroundFilter:0x10445c888 @options={:except=>#<Set: {"welcome"}>}, @identifier=nil, @method=:shopify_session, @kind=:filter>] did_not_yield.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2009-10-09 03:28:28) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing LoginController#authenticate (for 127.0.0.1 at 2009-10-09 03:28:32) [POST]
+  Parameters: {"shop"=>"bahringer-buckridge-and-quigley8926", "commit"=>"Install", "authenticity_token"=>"AV/fauW72UCyVkPds2qOZz1sfk5cbEj9+jwWgnN+DlE="}
+Redirected to http://bahringer-buckridge-and-quigley8926.myshopify.com/admin/api/auth?api_key=f0ea3e68d3f808ddbaf0faa5431f92f1
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/login/authenticate]
+
+
+Processing LoginController#finalize (for 127.0.0.1 at 2009-10-09 03:28:33) [GET]
+  Parameters: {"shop"=>"bahringer-buckridge-and-quigley8926.myshopify.com", "timestamp"=>"1255073313", "signature"=>"d9fec1e0dae010649df30924761be8df", "t"=>"72c27d483ed0b63fca8802397e21eb9e"}
+
+***** Debugger requested, but was not available: Start server with --debugger to enable *****
+Redirected to http://localhost:3000/
+Completed in 58ms (DB: 0) | 302 Found [http://localhost/login/finalize?timestamp=1255073313&shop=bahringer-buckridge-and-quigley8926.myshopify.com&signature=d9fec1e0dae010649df30924761be8df&t=72c27d483ed0b63fca8802397e21eb9e]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-10-09 03:28:33) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 6601ms (View: 1081, DB: 0) | 200 OK [http://localhost/]
+[Shopify App] Loading API credentials from config/shopify.yml
+[Shopify App] Loading API credentials from config/shopify.yml
+[Shopify App] Loading API credentials from config/shopify.yml
+[Shopify App] Loading API credentials from config/shopify.yml
+[Shopify App] Loading API credentials from config/shopify.yml
+[Shopify App] Loading API credentials from config/shopify.yml
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-10-09 04:17:31) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 6928ms (View: 1194, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#logout (for 127.0.0.1 at 2009-10-09 04:17:58) [GET]
+Redirected to http://localhost:3000/login
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/login/logout]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2009-10-09 04:17:58) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 14ms (View: 12, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing LoginController#authenticate (for 127.0.0.1 at 2009-10-09 04:18:28) [POST]
+  Parameters: {"shop"=>"http://bahringer-buckridge-and-quigley8926.myshopify.com/", "commit"=>"Install", "authenticity_token"=>"AV/fauW72UCyVkPds2qOZz1sfk5cbEj9+jwWgnN+DlE="}
+Redirected to http://bahringer-buckridge-and-quigley8926.myshopify.com/admin/api/auth?api_key=f0ea3e68d3f808ddbaf0faa5431f92f1
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/login/authenticate]
+
+
+Processing LoginController#finalize (for 127.0.0.1 at 2009-10-09 04:18:29) [GET]
+  Parameters: {"shop"=>"bahringer-buckridge-and-quigley8926.myshopify.com", "timestamp"=>"1255076309", "signature"=>"c9a079c7e1dd57c504a54d6f6e63b086", "t"=>"72c27d483ed0b63fca8802397e21eb9e"}
+  [4;36;1mShop Load (0.3ms)[0m   [0;1mSELECT * FROM "shops" WHERE ("shops"."url" = 'bahringer-buckridge-and-quigley8926.myshopify.com') LIMIT 1[0m
+  [4;35;1mShop Load (0.2ms)[0m   [0mSELECT "shops".id FROM "shops" WHERE ("shops"."pin" = '1111') LIMIT 1[0m
+  [4;36;1mShop Create (0.5ms)[0m   [0;1mINSERT INTO "shops" ("created_at", "updated_at", "url", "callout", "pin") VALUES('2009-10-09 08:18:36', '2009-10-09 08:18:36', NULL, NULL, '1111')[0m
+Redirected to http://localhost:3000/home
+Completed in 7235ms (DB: 1) | 302 Found [http://localhost/login/finalize?timestamp=1255076309&shop=bahringer-buckridge-and-quigley8926.myshopify.com&signature=c9a079c7e1dd57c504a54d6f6e63b086&t=72c27d483ed0b63fca8802397e21eb9e]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-10-09 04:18:36) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 6903ms (View: 1153, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#design (for 127.0.0.1 at 2009-10-09 04:19:57) [GET]
+Rendering template within layouts/application
+Rendering home/design
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/home/design]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-10-09 04:20:08) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 7282ms (View: 1059, DB: 0) | 200 OK [http://localhost/]

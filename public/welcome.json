@@ -1,6 +1,6 @@
 [{
     "name": "Speak",
-    "phrase": "It works. Enter 4 digits!"
+    "phrase": "Welcome to ShopTalk. Enter your 4 digit access code."
 },
 {
     "name": "GetDigits",
