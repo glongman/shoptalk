@@ -60,6 +60,7 @@ class Shop < ActiveRecord::Base
     #TODO obviously this could loop 4ever if there are already max # of shops created that a 4 digit pin allows for.
     #TODO and it will get slower and slower as more and more shops are added.
     #TODO should avoid generating pins like 1111, 0000, or 4444
+    # IDEA = could use a Bloom Filter to improve performance. http://en.wikipedia.org/wiki/Bloom_filter
     pin_to_set = nil
     begin
       pin_to_set = '%04d' % rand(9999)
