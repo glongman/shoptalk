@@ -27,13 +27,13 @@ class CallsController < ApplicationController
       order_count = Shop.count_todays_orders
       if Shop.count_todays_orders > 0
         render :text => [
-          {:name => :Speak, :phrase => 'I found #{order_count} orders that were created today. One moment please.'},
-          {:name => :Include, :url => "#{orders_url}.json?compute=yes", :max => 4}
+          {:name => :Speak, :phrase => "I found #{order_count} orders that were created today. One moment please."},
+          {:name => :Include, :url => "#{orders_url}.json?compute=yes"}
         ].to_json
       else
         render :text => [
           {:name => :Speak, :phrase => 'I did not find any orders that were created today. Goodbye.'},
-          { :name => :Hangup, :url => hangup_url}
+          {:name => :Hangup, :url => hangup_url}
         ].to_json
       end
     else
@@ -41,7 +41,7 @@ class CallsController < ApplicationController
         orders.inject(BigDecimal.new('0')) {|result, o| result + o.total_price}.to_s
       end
       render :text => [
-        {:name => :Speak, :phrase => 'The total value for todays orders is #{total}. Goodbye.'},
+        {:name => :Speak, :phrase => "The total value for todays orders is #{total}. Goodbye."},
         { :name => :Hangup, :url => hangup_url}
       ].to_json
     end
@@ -49,7 +49,7 @@ class CallsController < ApplicationController
   
   def hangup
     CallSessions::end_session_for params[:call_id]
-    render :status => :ok
+    render :text => 'hung up', :status => :ok
   end
   
   protected

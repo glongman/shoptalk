@@ -5,7 +5,7 @@
 	<meta http-equiv="imagetoolbar" content="no" />
 	<meta name="MSSmartTagsPreventParsing" content="true" />
 
-  <title>Shopify Application</title>
+  <title>ShopTalk</title>
 
   <%= stylesheet_link_tag 'application' %>
   <%= javascript_include_tag 'prototype' %>
@@ -14,7 +14,7 @@
 <body>
   
   <div id="header">
-    <h1><%= link_to 'Shopify Demo Application', '/' %></h1>      
+    <h1><%= link_to 'ShopTalk - Call Your Shop!', '/' %></h1>      
     
     <p id="login-link">  
       <% if current_shop %>
@@ -28,7 +28,7 @@
     
     <ul id="tabs">
       <%= tab :index, {:controller => 'home'}, :label => 'Home' %>
-      <%= tab :design, {:controller => 'home', :action => 'design'}, :label => 'Design Help' %>
+      <!--<%= tab :design, {:controller => 'home', :action => 'design'}, :label => 'Design Help' %>-->
     </ul>
   
     <!-- Flash error & notice-->

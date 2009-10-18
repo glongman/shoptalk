@@ -15,15 +15,17 @@ class Shop < ActiveRecord::Base
   def self.login_finalized(shopify_session)
     shop = Shop.find_by_url(shopify_session.url) || Shop.new(:url => shopify_session.url)
     shop.token = shopify_session.token
-    begin
-    with_shopify_session shopify_session do
-      api_shop = ShopifyAPI::Shop.current
-      shop.name = api_shop.name
-      shop.timezone = $1 if api_shop.timezone =~ /\(GMT.+\) (.*)/
-    end
-    rescue Timeout::Error, Errno::ECONNRESET
-      logger.warn "Shop.login_finalized - Unable to access the shop via the api: #{$!.to_s}"
-    end
+    shop.name = "Foo Shop"
+    shop.timezone = 'Eastern Time (US & Canada)'
+    # begin
+    #       with_shopify_session shopify_session do
+    #         api_shop = ShopifyAPI::Shop.current
+    #         shop.name = api_shop.name
+    #         shop.timezone = $1 if api_shop.timezone =~ /\(GMT.+\) (.*)/
+    #       end
+    #     rescue Timeout::Error, Errno::ECONNRESET
+    #       logger.warn "Shop.login_finalized - Unable to access the shop via the api: #{$!.to_s}"
+    #     end
     shop.save
   end
   
