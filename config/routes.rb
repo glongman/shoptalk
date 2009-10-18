@@ -2,7 +2,13 @@ ActionController::Routing::Routes.draw do |map|
   map.root :controller => 'home'
   # The priority is based upon order of creation: first created -> highest priority.
 
-  map.resources :calls, :member => {:hangup => :get}
+  map.with_options :controller => "calls" do |calls|
+    calls.calls_index "/calls", :action => 'index'
+    calls.new_call "/calls/new", :action => 'new'
+    calls.hangup "/calls/hangup", :action => 'hangup'
+    calls.orders "/call/order", :action => 'order_total'
+  end
+  
   # Sample of regular route:
   #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'
   # Keep in mind you can assign values other than :controller and :action

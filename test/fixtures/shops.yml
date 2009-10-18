@@ -1,11 +1,17 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  url: MyString
-  pin: MyString
-  callout: MyString
+snook:
+  url: snook.myshopify.com
+  pin: 1111
+  callout: nil
+  token: snook_token_55
+  timezone: "Eastern Time (US & Canada)"
+  name: Snook Store
 
-two:
-  url: MyString
-  pin: MyString
+book_store:
+  url: book_store.myshopify.com.
+  pin: 2222
   callout: MyString
+  token: book_token_99
+  timezone: "Hawaii"
+  name: Book Store
