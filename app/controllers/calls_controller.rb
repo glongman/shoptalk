@@ -38,10 +38,12 @@ class CallsController < ApplicationController
       end
     else
       total = Shop.get_todays_orders do |orders|
-        orders.inject(BigDecimal.new('0')) {|result, o| result + o.total_price}.to_s
+        orders.inject(BigDecimal.new('0')) {|result, o| result + o.total_price}
       end
+      fmt = "%05.2f" % total
+      cost_dollars, cost_cents = fmt.split '.'
       render :text => [
-        {:name => :Speak, :phrase => "The total value for todays orders is #{total}. Goodbye."},
+        {:name => :Speak, :phrase => "The total value for todays orders is #{cost_dollars} dollars and #{cost_cents} cents. Goodbye."},
         { :name => :Hangup, :url => "#{hangup_url}.json"}
       ].to_json
     end
