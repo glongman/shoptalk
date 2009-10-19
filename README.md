@@ -7,7 +7,6 @@
 <h2>Trying it out</h2>
 <p>
 The procedure for trying out this code yourself involves creating both a free CloudVox account and a Shopify developer API account. The application must be publicly available to work and I've include instructions for hosting the app on <a href="http://heroku.com">Heroku</a>. Using Heroku is the easiest way I've found to get up and running quickly. 
-<hr/>
 <h2><a href="http://cloudvox.com/signup">Sign up for a free CloudVox account</a> and create a voice application</h2>
 
 <p>
@@ -21,7 +20,6 @@ I used <a href="http://help.cloudvox.com/faqs/sip-phones/x-lite">X-Lite 4 (beta)
 create a Shopify application (mine was amazingly called ShopTalk)</br>
 make note of the API key and secret
 </p>
-<hr/>
 <h2>Get the code for this app</h2>
 <p>
 fork this project on GitHub </br>
