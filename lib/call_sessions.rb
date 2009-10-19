@@ -34,5 +34,3 @@ module CallSessionFilter
     CALLS[params[:call_id]] if params[:call_id]
   end
 end
-
-ActionController::Base.send :include, CallSessionFilter

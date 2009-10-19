@@ -1,6 +1,6 @@
 class CallsController < ApplicationController
   
-  around_filter :shopify_calls_session, :only => 'orders'
+  around_filter :shopify_call_session, :only => 'order_total'
   
   def index
     render :text => [
@@ -33,7 +33,7 @@ class CallsController < ApplicationController
       else
         render :text => [
           {:name => :Speak, :phrase => 'I did not find any orders that were created today. Goodbye.'},
-          {:name => :Hangup, :url => hangup_url}
+          {:name => :Hangup, :url => "#{hangup_url}.json"}
         ].to_json
       end
     else
@@ -42,7 +42,7 @@ class CallsController < ApplicationController
       end
       render :text => [
         {:name => :Speak, :phrase => "The total value for todays orders is #{total}. Goodbye."},
-        { :name => :Hangup, :url => hangup_url}
+        { :name => :Hangup, :url => "#{hangup_url}.json"}
       ].to_json
     end
   end
