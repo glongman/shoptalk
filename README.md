@@ -19,8 +19,8 @@ The procedure for trying out this code yourself involves creating both a free Cl
 </p>
 <h2><a href="http://shopify.com/developers">Sign up as a Shopify developer</a> (also free)</h2>
 <p>
-create a Shopify application (mine was amazingly called ShopTalk)</br>
-make note of the API key and secret
+create a Shopify application (mine was amazingly called ShopTalk)</p>
+<p>make note of the API key and secret
 </p>
 <h2>Get the code for this app</h2>
 <p>fork this project on GitHub </p>
