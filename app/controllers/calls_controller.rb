@@ -27,13 +27,13 @@ class CallsController < ApplicationController
       order_count = Shop.count_todays_orders
       if Shop.count_todays_orders > 0
         render :text => [
-          {:name => :Speak, :phrase => "I found #{order_count} orders that were created today. One moment please."},
+          {:name => :Speak, :phrase => "I found #{order_count} order#{order_count == 1 ? '': 's'} that #{order_count == 1 ? 'was': 'were'} created today. One moment please."},
           {:name => :Include, :url => "#{orders_url}.json?compute=yes"}
         ].to_json
       else
         render :text => [
           {:name => :Speak, :phrase => 'I did not find any orders that were created today. Goodbye.'},
-          {:name => :Hangup, :url => "#{hangup_url}.json"}
+          {:name => :Hangup}#, :url => "#{hangup_url}.json"}
         ].to_json
       end
     else
@@ -43,8 +43,8 @@ class CallsController < ApplicationController
       fmt = "%05.2f" % total
       cost_dollars, cost_cents = fmt.split '.'
       render :text => [
-        {:name => :Speak, :phrase => "The total value for todays orders is #{cost_dollars} dollars and #{cost_cents} cents. Goodbye."},
-        { :name => :Hangup, :url => "#{hangup_url}.json"}
+        {:name => :Speak, :phrase => "The total value for todays orders is #{cost_dollars} dollars and #{cost_cents == '00' ? '0' : cost_cents} cents. Goodbye."},
+        { :name => :Hangup }#, :url => "#{hangup_url}.json"}
       ].to_json
     end
   end

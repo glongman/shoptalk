@@ -25,7 +25,7 @@ module CallSessionFilter
     else            
       render :text => [
         {:name => :Speak, :phrase => "So sorry. Something has gone wrong. Please try again in a little while. Goodbye."},
-        {:name => :Hangup, :url => hangup_url}
+        {:name => :Hangup} #, :url => hangup_url}
       ].to_json      
     end
   end
