@@ -1,6 +1,8 @@
 
 #ShopTalk Demo Application
 
+
+
 <p>ShopTalk is a demonstration mashup app that melds the VOIP services of <a href="http://cloudvox.com">CloudVox</a>  and the APIs provided by <a href="http://shopify.com">Shopify</a>> for 3rd Party app development.</p>
 <p>Both are really cool services</p>
 
