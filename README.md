@@ -56,7 +56,7 @@ create a Shopify application (mine was amazingly called ShopTalk)</p>
 <p>Log in to the test shop as admin</p>
 <p>Add some orders to your test shop.</p>
 <p>Without logging out of the test shop, go to your app on heroku</p>
-<pre>http://http://your-host.heroku.com</pre>
+<pre>http://your-host.heroku.com</pre>
 <p>Enter the url of your shopify test shop and you will be redirected back to the heroku app</p>
 <p>Make note of the access code that is displayed on the ShopTalk homepage after installation</p>
 <h2>Call!</h2>
