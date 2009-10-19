@@ -3,10 +3,10 @@ ActionController::Routing::Routes.draw do |map|
   # The priority is based upon order of creation: first created -> highest priority.
 
   map.with_options :controller => "calls" do |calls|
-    calls.calls_index "/calls", :action => 'index'
-    calls.new_call "/calls/new", :action => 'new'
-    calls.hangup "/calls/hangup", :action => 'hangup'
-    calls.orders "/call/order", :action => 'order_total'
+    calls.calls_index "/calls.:format", :action => 'index'
+    calls.new_call "/calls/new.:format", :action => 'new'
+    calls.hangup "/calls/hangup.:format", :action => 'hangup'
+    calls.orders "/call/order.:format", :action => 'order_total'
   end
   
   # Sample of regular route:
