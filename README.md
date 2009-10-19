@@ -28,28 +28,31 @@ clone it into your local environment
 </p>
 <h2><a href="http://heroku.com/signup">Sign up for a free Heroku account</a></h2>
 <p>get the<a href="http://docs.heroku.com/heroku-command">Heroku gem</a></p>
-<p><a href="http://docs.heroku.com/creating-apps">create the app< using the gem</p>
+<p><a href="http://docs.heroku.com/creating-apps">create the app</a> using the gem</p>
 <p><a href="http://docs.heroku.com/git">deploy the app</a> using Git</p>
 <p>migrate:</p>
 <pre>heroku rake db:migrate</pre>       
 <p>Set config variables (Shopify API key and secret + Cloudvox app)</p>   
-<pre>    
-       > heroku config:add \
-            SHOPIFY_API_KEY=your-key \
-            SHOPIFY_API_SECRET=your-secret
-            SHOPTALK_LINE=your-cloudvox-phone-number-and-extension
+<pre>heroku config:add \
+  SHOPIFY_API_KEY=your-key \
+  SHOPIFY_API_SECRET=your-secret
+  SHOPTALK_LINE=your-cloudvox-phone-number-and-extension
 </pre>
 <p>Make note of the hostname Heroku assigned to your application
 <pre>> heroku info</pre>
+<p></p>
 
 <h2>Configure your Shopify app</h2>
 
 <p>add the post install callback url to your application running on Heroku</p>
 <pre>http://your-host.heroku.com/admin/finalize</pre>
+<p></p>
+
 <h2> Configure your Cloudvox application</h2>
 <p>When calls arrive a call plan is loaded from your application via an HTTP GET</p>
 <p>Enter the url to your application on Heroku. like this...</p>
 <pre>http://your-host.heroku.com/calls.json</pre>
+<p></p>
 <h2><a href="http://app.shopify.com/services/partners/api_clients/test_shops">Create a Test Shop</a> in Shopify and add your ShopTalk application to it</h2>
 <p>Log in to the test shop as admin</p>
 <p>Add some orders to your test shop.</p>
