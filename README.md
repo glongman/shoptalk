@@ -3,7 +3,7 @@
 
 
 
-<p>ShopTalk is a demonstration mashup app that melds the VOIP services of <a href="http://cloudvox.com">CloudVox</a>  and the APIs provided by <a href="http://shopify.com">Shopify</a>> for 3rd Party app development.</p>
+<p>ShopTalk is a demonstration mashup app that melds the VOIP services of <a href="http://cloudvox.com">CloudVox</a>  and the APIs provided by <a href="http://shopify.com">Shopify</a> for 3rd Party app development.</p>
 <p>Both are really cool services</p>
 
 <p>In a nutshell a Shopify customer, a shop owner, can add the ShopTalk application to their shop and gain the ability to phone into that shop from a land line. In the current incarnation the caller, after identifying using an access code, is able to access the running total for orders placed in the shop that day.</p>
